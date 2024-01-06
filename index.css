@@ -219,7 +219,10 @@ input[type=submit]:focus{
     }
     .para{
         font-size:1.4em;
-        gap:0.9em;
+        gap:1em;
+    }
+    .card2{
+        padding:10%;
     }
     .form__group{
         width: 100%;
