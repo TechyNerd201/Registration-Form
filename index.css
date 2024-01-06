@@ -123,6 +123,7 @@ input{
     font-family: 'Dancing Scr', cursive;
 }
 .form__group span{
+    display: inline-block;
     position: absolute;
     left:1em;
     top:1.6em;
@@ -152,11 +153,7 @@ input:valid ~span{
 input:focus{
     border: 2px solid rgb(44, 30, 193);
 }
-.submit-button{
-    position: relative;
-    left: 50%;
-    transform: translate(-50%,0%);
-}
+
 input[type=submit]{
     width:32%;
     padding: 0.7em;
@@ -164,6 +161,10 @@ input[type=submit]{
     cursor: pointer;
     border:none;
     color:rgb(1, 1, 168);
+    position: relative;
+    left: 50%;
+    transform: translate(-65%,0%);
+    font-weight: bold;
 }
 input[type=submit]:focus{
     background-color:rgb(44, 30, 193);
@@ -174,5 +175,66 @@ input[type=submit]:focus{
 
 
 /* media queries*/
-@media screen (min-width:)
+@media screen and (max-width:1200px) {
+
+    input:focus ~span[for="confirm-password"] ,
+    input:valid ~span[for="confirm-password"]{
+        letter-spacing:0em;
+        width:9em;
+    }
+}
+@media screen  and (max-width:700px){
+    
+    body{
+        backdrop-filter: blur(0px);
+        
+    }
+    .card1{
+        display: none;
+    }
+    .container1{
+        padding:0;
+        margin:0;
+        border:0;
+        overflow-y:visible;
+    }
+    .container2{
+        width:100vw;
+        height:100vh;
+        position:relative;
+        top:105vh;
+        margin-top: 0;
+        padding-top: 0;
+
+    }
+    .card2{
+        height: 110vh;
+        width: 100vw;
+        padding: 20%;
+    }
+}
+@media screen and (max-width:320px){
+    .form__row{
+        flex-direction: column;
+        
+        /* width: 80%; */
+    }
+    .form__group{
+        width: 100%;
+        padding:0;
+        margin:3%;
+        border:0;
+    }
+    input[type=submit]{
+        width:60%;
+        margin:9%;
+    }
+    .form__group span{
+        top:0.5em;
+        padding-left: 0.1em;
+    }
+    .signUp{
+        margin-bottom: 1em;
+    }
+}
 
