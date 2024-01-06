@@ -183,7 +183,7 @@ input[type=submit]:focus{
         width:9em;
     }
 }
-@media screen  and (max-width:700px){
+@media screen  and (max-width:700px),(orientation:landscape){
     
     body{
         backdrop-filter: blur(0px);
@@ -213,7 +213,7 @@ input[type=submit]:focus{
         padding: 20%;
     }
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:600px),(orientation:landscape){
     .form__row{
         flex-direction: column;
     }
