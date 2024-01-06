@@ -216,8 +216,10 @@ input[type=submit]:focus{
 @media screen and (max-width:600px){
     .form__row{
         flex-direction: column;
-        
-        /* width: 80%; */
+    }
+    .para{
+        font-size:1.4em;
+        gap:0.9em;
     }
     .form__group{
         width: 100%;
